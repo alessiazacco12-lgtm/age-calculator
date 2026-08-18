@@ -1,1 +1,35 @@
-<p>age-calculator works!</p>
+<!-- Contenitore principale del calcolatore dell'età -->
+<div class="calculator-container">
+
+    <!-- Titolo principale -->
+    <h1>Age Calculator</h1>
+
+    <!--Il form contiene il campo della data di nascita e il pulsante che avvia il calcolo dell'età.-->
+    <form (submit)="calculateAge($event)">
+
+        <!-- Etichetta del campo data -->
+        <label for="birthDate"> Enter your birth date: </label>
+
+        <!-- Contenitore del campo data e dell'icona. Serve per posizionare l'icona dentro la barra.-->
+        <div class="date-input">
+
+            <!-- Campo in cui viene mostrata la data selezionata. Usiamo type="text" perché la consegna richiede un JavaScript Datepicker esterno e non il datepicker HTML predefinito. readonly impedisce di modificare manualmente la data.-->
+            <input id="birthDate" type="text" placeholder="Select your birth date" readonly>
+
+            <!-- Solo questa icona apre o chiude il calendario. $event contiene le informazioni relative al click effettuato dall'utente.-->
+            <button type="button" class="calendar-icon" (click)="toggleCalendar($event)"
+                aria-label="Open calendar">📅</button>
+        </div>
+
+        <!-- Pulsante che invia il form e avvia il calcolo -->
+        <button type="submit" class="calculate-button"> Calculate </button>
+    </form>
+
+    <!-- Il messaggio di errore viene mostrato solamente quando errorMessage contiene un valore.-->
+    @if (errorMessage()) {
+    <p class="error"> {{ errorMessage() }} </p>}
+
+    <!-- Il risultato viene mostrato solamente dopo che l'utente ha effettuato il calcolo.-->
+    @if (result()) {
+    <p class="result"> {{ result() }} </p>}
+</div>

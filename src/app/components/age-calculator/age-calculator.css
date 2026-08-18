@@ -1,0 +1,94 @@
+/* Contenitore principale del calcolatore */
+.calculator-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Titolo principale */
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Form del calcolatore */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Etichetta della data di nascita */
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Contenitore relativo utilizzato per posizionare l'icona dentro il campo data. */
+.date-input {
+  position: relative;
+  width: 100%;
+}
+
+/* Campo che mostra la data selezionata */
+.date-input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  padding-right: 50px;
+  font-size: 16px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background-color: white;
+
+  /*L'input serve solamente per mostrare la data. pointer-events: none impedisce che l'input riceva il click del mouse. Quindi cliccando sulla barra NON si apre il datepicker.*/
+  pointer-events: none;
+}
+
+/*Icona utilizzata per aprire e chiudere il calendario.*/
+.calendar-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Pulsante Calculate */
+.calculate-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Effetto quando il mouse passa sul pulsante */
+.calculate-button:hover {
+  background-color: #444;
+}
+
+/* Risultato finale */
+.result {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Messaggio di errore */
+.error {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}

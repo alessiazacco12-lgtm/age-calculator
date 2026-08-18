@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* Stile del JavaScript Datepicker */
+@import 'js-datepicker/dist/datepicker.min.css';
+
+/* Dimensione del calendario del datepicker */
+.qs-datepicker-container {
+  width: 310px;
+}

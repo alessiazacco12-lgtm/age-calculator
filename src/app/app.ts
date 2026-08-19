@@ -10,8 +10,10 @@ import { AgeCalculator } from './components/age-calculator/age-calculator';
 
   // Rende disponibile AgeCalculator dentro questo componente.
   imports: [AgeCalculator],
+  
   // Collega il file HTML del componente.
   templateUrl: './app.html',
+
   // Collega il file CSS del componente.
   styleUrl: './app.css'
 })

@@ -1,6 +1,3 @@
-/* Stile del JavaScript Datepicker */
-@import 'js-datepicker/dist/datepicker.min.css';
-
 /* Dimensione del calendario del datepicker */
 .qs-datepicker-container {
   width: 310px;
